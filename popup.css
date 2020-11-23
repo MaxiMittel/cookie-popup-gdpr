@@ -1,0 +1,149 @@
+/*
+ * Cookie Popup
+ * https://github.com/MaxiMittel/cookie-popup
+ *
+ * Copyright (c) 2020 Maximilian Mittelhammer
+ *
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE', which is part of this source code package.
+ */
+ 
+ .gdpr-popup-blurred-background {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5000;
+}
+
+.gdpr-popup-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: absolute;
+  width: 60vw;
+  right: 1em;
+  top: 1em;
+  padding: 1.5em;
+  border-left: 5px solid #04143a;
+  color: #cfdee7;
+  z-index: 6000;
+  background-color: white;
+  word-break: break-word;
+}
+
+.gdpr-popup-heading {
+  margin: 0;
+  font-weight: 500;
+  color: #04143a;
+}
+
+.gdpr-popup-expand-heading {
+    font-weight: bold;
+    color: #04143a;
+    cursor: pointer;
+    font-size: 1em;
+    vertical-align: middle;
+    margin: 0.5em;
+}
+
+.gdpr-popup-text {
+  font-size: 0.8em;
+  color: #324475;
+  font-weight: 500;
+}
+
+.gdpr-popup-expand-container {
+  display: block;
+  padding: 1em;
+  padding-top: 0;
+}
+
+.gdpr-popup-checkbox{
+    margin: 0;
+    vertical-align: middle;
+}
+
+.gdpr-popup-checkbox-container {
+  margin: 1em;
+}
+
+.gdpr-popup-checkbox-heading-container{
+  margin-bottom: 0.5em;
+}
+
+.gdpr-popup-expand-info{
+    height: 1.2em; 
+    vertical-align: middle; 
+    cursor: pointer
+}
+
+
+.gdpr-popup-btn-container {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.gdpr-popup-btn {
+  padding: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 0.8em;
+  border: none;
+  background-color: #04143a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.gdpr-popup-btn:hover {
+  background-color: #010817;
+}
+
+.gdpr-popup-btn-green {
+  background-color: #28b463;
+}
+
+.gdpr-popup-btn-green:hover {
+  background-color: #239b56;
+}
+
+.gdpr-popup-btn:focus {
+  outline: none;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #cecece;
+  width: 90%;
+}
+
+table.gdpr-popup-table {
+  border-radius: 10px;
+  border-collapse: collapse;
+  overflow: hidden;
+  width: 100%;
+  color: #04143a;
+}
+
+.gdpr-popup-table thead {
+  background-color: #04143a;
+  color: white;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.gdpr-popup-table th {
+  padding: 0.7em;
+}
+
+.gdpr-popup-table td {
+  padding: 1em;
+}
+
+table.gdpr-popup-table tr:nth-child(even) {
+  background-color: #909ee014;
+}
