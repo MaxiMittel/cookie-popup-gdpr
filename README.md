@@ -1,6 +1,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
+  <a href="https://github.com/MaxiMittel/cookie-popup">
+    <img src="icon.png" alt="Logo" height="80">
+  </a>
   <h3 align="center">Cookie Popup</h3>
 
   <p align="center">
