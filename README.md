@@ -19,7 +19,7 @@
 
 Add the script below to the head tag of your website.
 ```html
-<script src="https://cdn.jsdelivr.net/gh/MaxiMittel/cookie-popup/popup.min.css"></script>
+<script src="https://cdn.jsdelivr.net/gh/MaxiMittel/cookie-popup/popup.min.js"></script>
 ```
 
 To configure and show the popup add the code below to your website. You can find more information about the configuration below.
