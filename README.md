@@ -50,7 +50,7 @@ _An full example can be found on [JSFiddle](https://jsfiddle.net/MaxiMittel/uavr
 | `checkboxes`      | `Array<CheckboxItem> `        | Define what cookie categories the user will be able to opt in/out of. More information about the type CheckboxItem below.       |
 | `buttons`         | `Array<ButtonItem>`          | Define what predefined checkbox combinations the user will be able to select. More information about the type ButtonItem below. |
 | `tableHeads`      | `Array<string>`               | Headings for the columns of the service table. (service table is defined in CheckboxItem)                                       |
-| `callback`        | `(res: ResultObject) => void` | This function will be called after the user made a selection.                                                                   |
+| `callback`        | `(res: Array<ResultObject>) => void` | This function will be called after the user made a selection.                                                                   |
 | `style`           | `string`                      | Provide your own stylesheet. Will default to the "popup.css" file.                                                              |
 | `position`           | `string`                   | Defines the position of the popup. Poissble values:  `top`, `top-left`,`top-right`,`bottom`, `bottom-left`,`bottom-right`
 | `savePref`           | `boolean`                   | Defines if the user will be able to save his preferences.
@@ -72,6 +72,13 @@ _An full example can be found on [JSFiddle](https://jsfiddle.net/MaxiMittel/uavr
 | `title`   | `string`     | The text inside the button.                                                                                  |
 | `onclick` | `() => void` | Define the onclick behaviour of the button. Use `check` and `uncheck` functions the define checkbox presets. |
 | `green`   | `boolean`    | If true button will be depicted in green otherwise in default color.                                         |
+
+### ResultObject
+| name    | type       | description                                                                                                  |
+|---------|------------|--------------------------------------------------------------------------------------------------------------|
+| `name`      | `string`  | The unqiue name of the category specified in the CheckboxItem |
+| `checked`   | `boolean` | Shows whether the user opted in or out of the category. |
+| `services`  | `Array<Array<string>>` | A List of all the services in this category. |
 
 <!-- OTHER FUNCTIONS -->
 ## Presets

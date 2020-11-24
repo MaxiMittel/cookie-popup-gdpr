@@ -55,6 +55,7 @@ class CookiePopup {
       let res = [];
       for (let i = 0; i < this.config.checkboxes.length; i++) {
         res.push({
+          name: this.config.checkboxes[i].name,
           checked: document.getElementsByName(this.config.checkboxes[i].name)[0]
             .checked,
           services: this.config.checkboxes[i].services,
