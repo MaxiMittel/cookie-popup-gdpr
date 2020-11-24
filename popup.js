@@ -22,7 +22,10 @@ class CookiePopup {
       tableHeads: config.tableHeads || ["Name", "Description"],
       buttons: config.buttons || defaultButtons,
       callback: config.callback || defaultCallback,
-      style: config.style || "https://cdn.jsdelivr.net/gh/MaxiMittel/cookie-popup/popup.min.css"
+      style: config.style || "https://cdn.jsdelivr.net/gh/MaxiMittel/cookie-popup/popup.min.css",
+      position: config.position || "top-right",
+      savePref: config.savePref || true,
+      savePrefDefault: config.savePrefDefault || true
     };
 
     //Check if preferences are set
@@ -60,9 +63,8 @@ class CookiePopup {
 
       this.config.callback(res);
 
-      //TODO: Checkbox "Save preferences"
       //Save the preferences
-      localStorage.setItem("gdpr-preferences", JSON.stringify(res));
+      if(this.config.savePref) localStorage.setItem("gdpr-preferences", JSON.stringify(res));
 
       //Remove the popup from the DOM
       document.body.removeChild(blurred_bg);
@@ -84,6 +86,7 @@ class CookiePopup {
       );
     }
 
+    if(this.config.savePref) form.appendChild(this.createSavePref());
     form.appendChild(this.createButtonGroup(this.config.buttons));
     popup.appendChild(form);
   }
@@ -121,6 +124,7 @@ class CookiePopup {
   createPopupContainer = () => {
     let popup_container = document.createElement("div");
     popup_container.classList.add("gdpr-popup-container");
+    popup_container.classList.add("gdpr-popup-position-" + this.config.position);
 
     //Heading
     let heading = document.createElement("h3");
@@ -252,6 +256,35 @@ class CookiePopup {
 
     return checkbox_container;
   };
+
+  /**
+   * Create the save preferences checkbox.
+   */
+  createSavePref = () =>{
+
+    let container = document.createElement("div");
+
+    //Checkbox
+    let checkbox_input = document.createElement("input");
+    let checkbox_id = "gdpr-popup-save-pref-checkbox";
+    checkbox_input.setAttribute("type", "checkbox");
+    checkbox_input.classList.add("gdpr-popup-save-pref-checkbox");
+    checkbox_input.id = checkbox_id;
+    checkbox_input.checked = this.config.savePrefDefault;
+    checkbox_input.onchange = () => {
+      this.config.savePref = !this.config.savePref;
+    };
+    container.appendChild(checkbox_input);
+
+    //Title
+    let checkbox_label = document.createElement("label");
+    checkbox_label.setAttribute("for", checkbox_id);
+    checkbox_label.innerText = "Save preferences on this computer.";
+    checkbox_label.classList.add("gdpr-popup-save-pref-label");
+    container.appendChild(checkbox_label);
+
+    return container;
+  }
 
   /**
    * Creates the buttons at the bottom of the popup.

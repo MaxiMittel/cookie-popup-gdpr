@@ -52,6 +52,9 @@ _An full example can be found on [JSFiddle](https://jsfiddle.net/MaxiMittel/uavr
 | `tableHeads`      | `Array<string>`               | Headings for the columns of the service table. (service table is defined in CheckboxItem)                                       |
 | `callback`        | `(res: ResultObject) => void` | This function will be called after the user made a selection.                                                                   |
 | `style`           | `string`                      | Provide your own stylesheet. Will default to the "popup.css" file.                                                              |
+| `position`           | `string`                   | Defines the position of the popup. Poissble values:  `top`, `top-left`,`top-right`,`bottom`, `bottom-left`,`bottom-right`
+| `savePref`           | `boolean`                   | Defines if the user will be able to save his preferences.
+| `savePrefDefault`    | `boolean`                   | Defines the default value of the save preferences checkbox.
 
 ### CheckboxItem
 | name        | type                 | description                                                                                                                                     |
