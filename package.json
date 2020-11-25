@@ -1,0 +1,26 @@
+{
+  "name": "cookie-popup-gdpr",
+  "version": "1.1.0",
+  "description": "Simple lightweight EU, GDPR cookie popup.",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxiMittel/cookie-popup.git"
+  },
+  "keywords": [
+    "cookies",
+    "gdpr",
+    "dsgvo",
+    "eu-cookie",
+    "eu-cookie-law"
+  ],
+  "author": "Maximilian Mittelhammer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaxiMittel/cookie-popup/issues"
+  },
+  "homepage": "https://github.com/MaxiMittel/cookie-popup#readme"
+}
