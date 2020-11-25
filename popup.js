@@ -96,7 +96,7 @@ class CookiePopup {
    * Checks whether the stylesheet has already been
    * loaded if not loads it.
    */
-  loadStylesheet = () => {
+  loadStylesheet() {
     var stylesheet = "gdpr-popup-stylesheet";
     if (!document.getElementById(stylesheet)) {
       var head = document.getElementsByTagName("head")[0];
@@ -113,7 +113,7 @@ class CookiePopup {
   /**
    * Creates the blurred background.
    */
-  createBlurredBackground = () => {
+  createBlurredBackground(){
     let blurred_background = document.createElement("div");
     blurred_background.classList.add("gdpr-popup-blurred-background");
     return blurred_background;
@@ -122,7 +122,7 @@ class CookiePopup {
   /**
    * Create the actual popup.
    */
-  createPopupContainer = () => {
+  createPopupContainer(){
     let popup_container = document.createElement("div");
     popup_container.classList.add("gdpr-popup-container");
     popup_container.classList.add("gdpr-popup-position-" + this.config.position);
@@ -151,14 +151,14 @@ class CookiePopup {
    * @param {boolean} checked Determines the default state of the checkbox.
    * @param {array} services A two dimensional array of services.
    */
-  createExpandContainer = (
+  createExpandContainer(
     title,
     name,
     description,
     required,
     checked,
     services
-  ) => {
+  ){
     let checkbox_container = document.createElement("div");
 
     //Checkbox Title Information
@@ -261,7 +261,7 @@ class CookiePopup {
   /**
    * Create the save preferences checkbox.
    */
-  createSavePref = () =>{
+  createSavePref(){
 
     let container = document.createElement("div");
 
@@ -291,7 +291,7 @@ class CookiePopup {
    * Creates the buttons at the bottom of the popup.
    * @param {array} buttons An array of button definitions.
    */
-  createButtonGroup = (buttons) => {
+  createButtonGroup(buttons){
     let button_group_container = document.createElement("div");
     button_group_container.classList.add("gdpr-popup-btn-container");
 
@@ -316,7 +316,7 @@ class CookiePopup {
    * Creates a random id.
    * @param {string} prefix A string placed before the random id.
    */
-  makeID = (prefix) => {
+  makeID(prefix){
     return prefix + "_" + Math.random().toString(36).substr(2, 9);
   };
 }
@@ -346,7 +346,7 @@ let defaultCallback = (res) => console.log(res);
  * Sets the checked attribute to true on all passed checkboxes. (Checkbox name attribute)
  * @param {array} arguments Pass a undefined amount of checkbox names.
  */
-function check() {
+const check = function() {
   for (var i = 0; i < arguments.length; i++) {
     document.getElementsByName(arguments[i])[0].checked = true;
   }
@@ -356,7 +356,7 @@ function check() {
  * Sets the checked attribute to false on all passed checkboxes. (Checkbox name attribute)
  * @param {array} arguments Pass a undefined amount of checkbox names.
  */
-function uncheck() {
+const uncheck = function() {
   for (var i = 0; i < arguments.length; i++) {
     document.getElementsByName(arguments[i])[0].checked = false;
   }
@@ -364,3 +364,5 @@ function uncheck() {
 
 let info_svg =
   "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzVweCIgaGVpZ2h0PSIzNXB4IiB2aWV3Qm94PSIwIDAgMzUgMzUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+SW5mb3JtYXRpb248L3RpdGxlPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkluZm9ybWF0aW9uIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxLjAwMDAwMCwgMS4wMDAwMDApIiBzdHJva2U9IiMwMDAwMDAiPgogICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBzdHJva2Utd2lkdGg9IjIiIGN4PSIxNi41IiBjeT0iMTYuNSIgcj0iMTYuNSI+PC9jaXJjbGU+CiAgICAgICAgICAgIDxsaW5lIHgxPSIxNi41IiB5MT0iMTYuNSIgeDI9IjE2LjUiIHkyPSIyNi41IiBpZD0iTGluZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvbGluZT4KICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbCIgZmlsbD0iIzAwMDAwMCIgY3g9IjE2LjUiIGN5PSI5LjUiIHI9IjIiPjwvY2lyY2xlPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+";
+
+exports = {CookiePopup, check, uncheck};
