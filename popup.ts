@@ -8,7 +8,7 @@
  * file 'LICENSE', which is part of this source code package.
  */
 
-type CheckboxItem = {
+export type CheckboxItem = {
   title: string,
   required: boolean,
   checked: boolean,
@@ -17,19 +17,19 @@ type CheckboxItem = {
   services: Array<Array<string>>
 };
 
-type ButtonItem = {
+export type ButtonItem = {
   title: string,
   onclick: () => void,
   green: boolean
 };
 
-type ResultObject = {
+export type ResultObject = {
   name: string,
   checked: boolean,
   services: Array<Array<string>>
 };
 
-type CookiePopupConfig = {
+export type CookiePopupConfig = {
   heading: string,
   informationText: string,
   checkboxes: Array<CheckboxItem>,

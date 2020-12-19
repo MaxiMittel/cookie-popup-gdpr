@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/MaxiMittel/cookie-popup">
+  <a href="https://github.com/MaxiMittel/cookie-popup-gdpr">
     <img src="icon.png" alt="Logo" height="80">
   </a>
   <h3 align="center">Cookie Popup</h3>
@@ -10,9 +10,9 @@
     <br />
     <a href="https://jsfiddle.net/MaxiMittel/uavrwmdc">View Demo</a>
     ·
-    <a href="https://github.com/MaxiMittel/cookie-popup/issues">Report Bug</a>
+    <a href="https://github.com/MaxiMittel/cookie-popup-gdpr/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MaxiMittel/cookie-popup/issues">Request Feature</a>
+    <a href="https://github.com/MaxiMittel/cookie-popup-gdpr/issues">Request Feature</a>
   </p>
 </p>
 
@@ -135,4 +135,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Maximilian Mittelhammer - [@maxi_maximittel](https://twitter.com/maxi_maximittel) - maximittel@outlook.de
 
-Project Link: [https://github.com/MaxiMittel/cookie-popup](https://github.com/MaxiMittel/cookie-popup)
+Project Link: [https://github.com/MaxiMittel/cookie-popup-gdpr](https://github.com/MaxiMittel/cookie-popup-gdpr)
