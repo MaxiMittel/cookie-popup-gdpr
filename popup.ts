@@ -20,7 +20,7 @@ export type CheckboxItem = {
 export type ButtonItem = {
   title: string,
   onclick: () => void,
-  green: boolean
+  green?: boolean
 };
 
 export type ResultObject = {
@@ -30,6 +30,19 @@ export type ResultObject = {
 };
 
 export type CookiePopupConfig = {
+  heading?: string,
+  informationText?: string,
+  checkboxes?: Array<CheckboxItem>,
+  tableHeads?: Array<string>,
+  buttons?: Array<ButtonItem>,
+  style?: string,
+  position?: string,
+  savePref?: boolean,
+  savePrefDefault?: boolean,
+  callback?: (res: Array<ResultObject>) => void
+};
+
+export type DefaultCookiePopupConfig = {
   heading: string,
   informationText: string,
   checkboxes: Array<CheckboxItem>,
@@ -47,7 +60,7 @@ export type CookiePopupConfig = {
  */
 export class CookiePopup {
 
-  config: CookiePopupConfig;
+  config: DefaultCookiePopupConfig;
 
   /**
    * Initializes config parameters and creates the containers.
