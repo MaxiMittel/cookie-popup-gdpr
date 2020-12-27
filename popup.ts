@@ -105,7 +105,9 @@ export class CookiePopup {
       this.config.callback(res);
 
       //Save the preferences
-      if(this.config.savePref) localStorage.setItem("gdpr-preferences", JSON.stringify(res));
+      if(this.config.savePref == true){
+        localStorage.setItem("gdpr-preferences", JSON.stringify(res));
+      } 
 
       //Remove the popup from the DOM
       document.body.removeChild(blurred_bg);
