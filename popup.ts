@@ -81,6 +81,8 @@ export class CookiePopup {
       savePrefDefault: config.savePrefDefault || true
     };
 
+    if (document.getElementById("gdpr-popup-container-id")) return;
+
     //Check if preferences are set
     let saved_prefs = localStorage.getItem("gdpr-preferences");
     if (saved_prefs !== null) {
@@ -171,6 +173,7 @@ export class CookiePopup {
    */
   createPopupContainer(){
     let popup_container = document.createElement("div");
+    popup_container.id = "gdpr-popup-container-id";
     popup_container.classList.add("gdpr-popup-container");
     popup_container.classList.add("gdpr-popup-position-" + this.config.position);
 
