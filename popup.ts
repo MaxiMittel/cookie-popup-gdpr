@@ -393,21 +393,21 @@ const getCheckboxByName = function(name: string): HTMLInputElement {
 
 /**
  * Sets the checked attribute to true on all passed checkboxes. (Checkbox name attribute)
- * @param {array} arguments Pass a undefined amount of checkbox names.
+ * @param {array} args Pass a undefined amount of checkbox names.
  */
-export const check = function() {
-  for (var i = 0; i < arguments.length; i++) {
-    getCheckboxByName(arguments[i]).checked = true;
+export const check = function(...args: string[]) {
+  for (var i = 0; i < args.length; i++) {
+    getCheckboxByName(args[i]).checked = true;
   }
 }
 
 /**
  * Sets the checked attribute to false on all passed checkboxes. (Checkbox name attribute)
- * @param {array} arguments Pass a undefined amount of checkbox names.
+ * @param {array} args Pass a undefined amount of checkbox names.
  */
-export const uncheck = function() {
-  for (var i = 0; i < arguments.length; i++) {
-    getCheckboxByName(arguments[i]).checked = false;
+export const uncheck = function(...args: string[]) {
+  for (var i = 0; i < args.length; i++) {
+    getCheckboxByName(args[i]).checked = false;
   }
 }
 
