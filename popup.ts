@@ -77,8 +77,8 @@ export class CookiePopup {
       callback: config.callback || defaultCallback,
       style: config.style || "https://cdn.jsdelivr.net/gh/MaxiMittel/cookie-popup-gdpr/popup.min.css",
       position: config.position || "top-right",
-      savePref: config.savePref || true,
-      savePrefDefault: config.savePrefDefault || true
+      savePref: config.savePref === undefined ? true : config.savePref,
+      savePrefDefault: config.savePrefDefault === undefined ? true : config.savePrefDefault
     };
 
     if (document.getElementById("gdpr-popup-container-id")) return;
