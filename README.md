@@ -38,7 +38,7 @@ To configure and show the popup add the code below to your website. You can find
 
 ```js
 let config = {
-  header: "This site contains cookies",
+  heading: "This site contains cookies",
   //Rest of your configuration
 };
 
